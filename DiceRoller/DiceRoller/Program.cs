@@ -38,6 +38,8 @@ while ( keepPlaying == "y")
     {
         dice1 = rnd1.Next(1, (diceSides + 1));
         dice2 = rnd2.Next(1, (diceSides + 1));
+        diceTotal = dice1 + dice2;
+
         Console.WriteLine($"Roll {rollCounter}");
         Console.WriteLine($"Dice 1: {dice1} and Dice 2: {dice2}");
         Console.WriteLine($"Dice Total: {diceTotal}");
@@ -62,26 +64,16 @@ while ( keepPlaying == "y")
                 break;
         }
 
-        if (diceTotal == 7)
+        if (diceTotal == 7 || diceTotal == 11)
         {
             Console.WriteLine("You Win!");
         }
-        else if (diceTotal == 11)
-        {
-            Console.WriteLine("You Win!");
-        }
-        else if (diceTotal == 2)
+
+        else if (diceTotal == 2 || diceTotal == 3 || diceTotal == 12)
         {
             Console.WriteLine("CRAPS!");
         }
-        else if (diceTotal == 3)
-        {
-            Console.WriteLine("CRAPS!");
-        }
-        else if (diceTotal == 12) 
-        {
-            Console.WriteLine("CRAPS!");
-        }
+        
         rollCounter++;
     }
 }
