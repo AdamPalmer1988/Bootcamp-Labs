@@ -2,9 +2,11 @@
 
 <ul>
     <li *ngFor="let task of todo" >
-        <div>
-            <button (click)="onComplete(task)" class = "completed-button">Completed</button>
-            {{task.task}} - {{task.duration}} Minutes
+        <div >
+            <button (click)="onComplete(task)" [ngStyle]="{'display' : task.completed ? 'none' : 'inline-block'}" class = "completed-button" >Completed</button>
+                <span [ngClass]="task.completed ? 'completed' : ''">
+                    {{task.task}} - {{task.duration}} Minutes
+                </span>
             <button (click)="removeTask(task.id)">X</button>
         </div>
     </li>

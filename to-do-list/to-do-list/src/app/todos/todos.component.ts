@@ -13,10 +13,10 @@ import { FormsModule } from '@angular/forms';
 export class TodosComponent {
 todo:Todo[] = [
 
-  {id: 1, task: "Brush Teeth", duration: 2},
-  {id: 2, task: "Get Dressed", duration: 5},
-  {id: 3, task: "Make Breakfast", duration: 8},
-  {id: 4, task: "Eat Breakfast", duration: 15}
+  {id: 1, task: "Brush Teeth", duration: 2, completed: false},
+  {id: 2, task: "Get Dressed", duration: 5, completed: false},
+  {id: 3, task: "Make Breakfast", duration: 8, completed: false},
+  {id: 4, task: "Eat Breakfast", duration: 15, completed: false}
 
 ];
 
@@ -24,7 +24,9 @@ removeTask(id:number): void{
   this.todo = this.todo.filter(todo => todo.id !== id);
 }
 
-onComplete(todo:Todo): void {
-  this.todo = this.todo.filter(t => t !== todo)
+onComplete(todo: Todo): void {
+  console.log("onComplete",todo);
+  todo.completed = true;
 }
+
 }
