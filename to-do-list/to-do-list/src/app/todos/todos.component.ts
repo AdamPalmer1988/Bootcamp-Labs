@@ -29,4 +29,17 @@ onComplete(todo: Todo): void {
   todo.completed = true;
 }
 
+id:number = 0;
+task:string = '';
+duration:number = 0;
+completed:boolean = false;
+
+addTask() : void {
+  this.todo.push({id: this.id, task: this.task, duration: this.duration, completed: this.completed});
+  this.id = 0;
+  this.task = '';
+  this.duration = 0;
+  this.completed = false;
+}
+
 }

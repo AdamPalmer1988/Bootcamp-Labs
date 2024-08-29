@@ -1,3 +1,5 @@
+<div class="background">
+
 <h1>TO DO List</h1>
 
 <ul>
@@ -12,3 +14,12 @@
     </li>
 </ul>
 
+<label>Input Task Name:</label>
+<input type="text" [(ngModel)] = "task" />
+
+<label>Input Duration Time:</label>
+<input type="number" [(ngModel)] = "duration" />
+
+<button (click)="addTask()">Submit</button>
+
+</div>
