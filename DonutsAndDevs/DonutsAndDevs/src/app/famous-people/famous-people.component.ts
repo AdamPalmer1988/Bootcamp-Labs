@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { inject } from '@angular/core/testing';
+import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
 import { DevsService } from '../devs.service';
 import { Devs } from '../models/devs';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-famous-people',
@@ -21,4 +21,13 @@ export class DevsComponent {
 
   devList:Devs[] = [];
   
+  loadDevs() : void {
+    this.devService.getDevs().subscribe(      //subscribe is making the call to the API
+      (devs) => {
+      this.devList = devs.results;
+      console.log(devs); 
+    } 
+    )
+  }
+
 }
