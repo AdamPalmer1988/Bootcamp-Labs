@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { DonutService } from '../donut.service';
 import { Donut } from '../models/donut';
+import { DevsComponent } from '../famous-people/famous-people.component';
 
 @Component({
   selector: 'app-donuts',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, DevsComponent],
   templateUrl: './donuts.component.html',
   styleUrl: './donuts.component.css'
 })

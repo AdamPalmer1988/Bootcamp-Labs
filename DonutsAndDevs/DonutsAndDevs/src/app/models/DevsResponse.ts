@@ -1,6 +1,7 @@
-import { Devs } from "./devs";
+import { Complete } from "./devsComplete";
+import { Tiny } from "./devsTiny";
 
 export interface DevsResponse {
-    results:Devs[];
-    count:number;
+    complete:Complete[];
+    tiny:Tiny[];
 }
