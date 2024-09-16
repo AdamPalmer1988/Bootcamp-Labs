@@ -1,1 +1,21 @@
-<p>famous-people works!</p>
+<h2>Dev Hall of Fame</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Innovation</th>
+            <th>Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let row of devList">
+            <td>{{row.firstName}}</td>
+            <td>{{row.lastName}}</td>
+            <td>{{row.innovation}}</td>
+            <td>{{row.year}}</td>
+        </tr>
+    </tbody>
+</table>
+
