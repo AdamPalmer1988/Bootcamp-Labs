@@ -1,0 +1,8 @@
+<div class="donut-container"></div>
+    <div *ngFor="let donut of donutList">
+        <h2>{{donut.name}}</h2>
+        <img [src]="donut.photo" style="width: 10%; height: auto;/">
+        <p>
+            <a href="{{donut.photo_attribution}}">Go to Image</a>
+        </p>
+    </div>

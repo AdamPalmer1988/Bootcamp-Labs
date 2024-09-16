@@ -1,0 +1,27 @@
+<table>
+    <thead>
+        <th>Description</th>
+        <th>Restaurant</th>
+        <th>Rating</th>
+        <th>Order Again?</th>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let row of orderList">
+            <td>{{row.description}}</td>
+            <td>{{row.restaurant}}</td>
+            <td>{{row.rating}}</td>
+            <span *ngIf ="row.orderAgain">✔</span>
+            <td>
+            <button (click)="deleteOrder(row)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<label>Input Description:</label>
+<input type="text" [(ngModel)] = "description" />
+
+<li></li>
+
+<label>Input Restaurant:</label>
+<input type="text" [(ngModel)] = "restaurant" />
